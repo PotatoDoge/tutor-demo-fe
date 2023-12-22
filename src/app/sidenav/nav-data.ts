@@ -10,6 +10,11 @@ export const navbarData = [
     label: 'Employees',
   },
   {
+    routeLink: 'tutors',
+    icon: 'fa-solid fa-chalkboard-user',
+    label: 'Tutor'
+  },
+  {
     routeLink: 'settings',
     icon: 'fa-solid fa-gear',
     label: 'Settings',

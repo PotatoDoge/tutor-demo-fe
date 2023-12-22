@@ -29,6 +29,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { HeaderComponent } from './header/header.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ExperimentComponent } from './experiment/experiment.component';
+import { TutorsComponent } from './tutors/tutors.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ExperimentComponent } from './experiment/experiment.component';
     SettingsComponent,
     HeaderComponent,
     ExperimentComponent,
+    TutorsComponent,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
