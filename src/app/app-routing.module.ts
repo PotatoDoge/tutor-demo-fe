@@ -5,6 +5,7 @@ import { EmployeesTableComponent } from './employees-table/employees-table.compo
 import { SettingsComponent } from './settings/settings.component';
 import { ExperimentComponent } from './experiment/experiment.component';
 import {TutorsComponent} from "./tutors/tutors.component";
+import {StudentComponent} from "./components/student/student.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -13,8 +14,8 @@ const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: 'employees',
-    component: EmployeesTableComponent,
+    path: 'students',
+    component: StudentComponent,
   },
   {
     path: 'tutors',

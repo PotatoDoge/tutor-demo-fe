@@ -5,7 +5,7 @@ export const navbarData = [
     label: 'Dashboard',
   },
   {
-    routeLink: 'employees',
+    routeLink: 'students',
     icon: 'fa-solid fa-user',
     label: 'Employees',
   },
