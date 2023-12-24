@@ -1,0 +1,39 @@
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(190px, 1fr)
+  ); /* Adjust the card width (150px) as needed */
+  gap: 20px; /* Adjust the gap (space between cards) as needed */
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  /* Add any additional styling you desire for the individual cards */
+}
+
+.card:hover {
+  border: 1px solid black;
+}
+
+.card .card-body li {
+  list-style: none;
+}
+
+.card-head img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+  max-height: 150px;
+}
+
+.card-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-body .card-property-name {
+  font-weight: 1000;
+}

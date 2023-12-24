@@ -34,13 +34,16 @@ export class StudentInfoModalComponent {
 
   onFormSubmit() {
     if (this.empForm.valid) {
-      this.addStudent(this.empForm.valid)
+      this.addStudent(this.empForm.value)
     }
   }
 
   private addStudent(formData: any) {
-    this.studentService.addStudent(this.empForm.value).subscribe({
+    this.studentService.addStudent(formData).subscribe({
       next: (response: any) => {
+        this.studentService.addStudentToComponent(
+          response.data.student
+        );
         this.dialog.closeAll();
         this.openSnackBar('Student created successfully!', 'success-snackbar');
       },

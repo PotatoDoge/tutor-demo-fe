@@ -1,4 +1,21 @@
-<p>Show students</p>
+<div class="info-cards">
+  <div class="card" *ngFor="let student of dataSource.data">
+    <div class="card-head"><img [src]="getImage(student.id)" class="fixed-size-image"></div>
+    <div class="card-body">
+      <ul>
+        <span class="card-property-location">
+          <li>ID: {{ student.id }}</li>
+        </span>
+        <span class="card-property-description">
+          <li>Name: {{ student.firstName }}</li>
+        </span>
+        <span class="card-property-description">
+          <li>Last Name: {{ student.lastName }}</li>
+        </span>
+      </ul>
+    </div>
+  </div>
+</div>
 <div class="example-button-row">
   <button mat-raised-button (click)="openStudentInfoModal()">Add Student</button>
 </div>
