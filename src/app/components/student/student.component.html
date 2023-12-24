@@ -3,14 +3,14 @@
     <div class="card-head"><img [src]="getImage(student.id)" class="fixed-size-image"></div>
     <div class="card-body">
       <ul>
-        <span class="card-property-location">
-          <li>ID: {{ student.id }}</li>
-        </span>
         <span class="card-property-description">
           <li>Name: {{ student.firstName }}</li>
         </span>
         <span class="card-property-description">
           <li>Last Name: {{ student.lastName }}</li>
+        </span>
+        <span class="card-property-description">
+          <li>Email: {{ student.email }}</li>
         </span>
       </ul>
     </div>
