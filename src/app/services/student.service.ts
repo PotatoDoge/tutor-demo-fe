@@ -19,7 +19,8 @@ export class StudentService {
     return this.http.get<any>(url);
   }
 
-  addStudent(student: any): Observable<any> {
+  addStudent(student: Student): Observable<any> {
+    console.log(student)
     return this.http.post<any>(this.baseUrl, student);
   }
 
@@ -32,4 +33,10 @@ export class StudentService {
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete<any>(url);
   }
+}
+
+export interface Student {
+  firstName: string;
+  lastName: string;
+  email: string;
 }

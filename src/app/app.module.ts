@@ -31,6 +31,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { ExperimentComponent } from './experiment/experiment.component';
 import { TutorsComponent } from './tutors/tutors.component';
 import { StudentComponent } from './components/student/student.component';
+import { StudentInfoModalComponent } from './components/modals/student-info-modal/student-info-modal.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { StudentComponent } from './components/student/student.component';
     ExperimentComponent,
     TutorsComponent,
     StudentComponent,
+    StudentInfoModalComponent,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
