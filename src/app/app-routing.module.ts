@@ -1,18 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { EmployeesTableComponent } from './employees-table/employees-table.component';
-import { SettingsComponent } from './settings/settings.component';
-import { ExperimentComponent } from './experiment/experiment.component';
-import {TutorsComponent} from "./tutors/tutors.component";
+import { SettingsComponent } from './components/settings/settings.component';
+import {TutorsComponent} from "./components/tutors/tutors.component";
 import {StudentComponent} from "./components/student/student.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-  },
+  { path: '', redirectTo: 'students', pathMatch: 'full' },
   {
     path: 'students',
     component: StudentComponent,
@@ -24,11 +17,7 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
-  },
-  {
-    path: 'testing',
-    component: ExperimentComponent,
-  },
+  }
 ];
 
 @NgModule({
