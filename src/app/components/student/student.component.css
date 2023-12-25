@@ -37,3 +37,8 @@
 .card .card-body .card-property-name {
   font-weight: 1000;
 }
+
+.example-button-row button{
+  margin-right: 10px;
+  margin-top: 10px;
+}

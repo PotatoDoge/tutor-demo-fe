@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -28,6 +28,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { TutorsComponent } from './components/tutors/tutors.component';
 import { StudentComponent } from './components/student/student.component';
 import { StudentInfoModalComponent } from './components/modals/student-info-modal/student-info-modal.component';
+import { AppointmentComponent } from './components/modals/appointment/appointment.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { StudentInfoModalComponent } from './components/modals/student-info-moda
     TutorsComponent,
     StudentComponent,
     StudentInfoModalComponent,
+    AppointmentComponent,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
@@ -62,6 +65,8 @@ import { StudentInfoModalComponent } from './components/modals/student-info-moda
     MatTableModule,
     FontAwesomeModule,
     OverlayModule,
+    FormsModule,
+    MatSelectModule
   ],
 })
 export class AppModule {}

@@ -1,0 +1,23 @@
+<div mat-dialog-title>
+  <h1>Appointment</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="select-row">
+      <mat-select formControlName="subjectOption" placeholder="Subject" class="mat-select">
+        <mat-option *ngFor="let option of options" [value]="option.value">
+          {{ option.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-select formControlName="levelOption" placeholder="Level" class="mat-select">
+        <mat-option *ngFor="let option of options" [value]="option.value">
+          {{ option.viewValue }}
+        </mat-option>
+      </mat-select>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </div>
+</form>

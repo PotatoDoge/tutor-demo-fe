@@ -1,0 +1,35 @@
+.content {
+  padding-top: 10px;
+}
+
+.select-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.action {
+  padding: 0px 25px 20px;
+}
+
+.action button {
+  flex: 1;
+}
+
+.success-snackbar {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.error-snackbar {
+  background-color: red;
+  color: #ffffff;
+}
+
+/* Styling for mat-select */
+.mat-select {
+  border: 1px solid #ccc;
+  border-radius:4px;
+  padding: 8px;
+}
+

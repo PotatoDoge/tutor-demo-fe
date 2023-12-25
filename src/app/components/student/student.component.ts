@@ -3,6 +3,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {StudentInfoModalComponent} from "../modals/student-info-modal/student-info-modal.component";
 import {MatTableDataSource} from "@angular/material/table";
 import {Student, StudentService} from "../../services/student.service";
+import {AppointmentComponent} from "../modals/appointment/appointment.component";
 
 @Component({
   selector: 'app-student',
@@ -35,7 +36,10 @@ export class StudentComponent implements OnInit {
 
   openStudentInfoModal() {
     this._dialog.open(StudentInfoModalComponent);
-    console.log(this.dataSource.data)
+  }
+
+  openAppointmentModal(){
+    this._dialog.open(AppointmentComponent);
   }
 
 }
