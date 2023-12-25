@@ -2,7 +2,7 @@ export const navbarData = [
   {
     routeLink: 'students',
     icon: 'fa-solid fa-user',
-    label: 'Employees',
+    label: 'Students',
   },
   {
     routeLink: 'tutors',
