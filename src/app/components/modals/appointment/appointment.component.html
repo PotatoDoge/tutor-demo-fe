@@ -5,13 +5,13 @@
   <div mat-dialog-content class="content">
     <div class="select-row">
       <mat-select formControlName="subjectOption" placeholder="Subject" class="mat-select">
-        <mat-option *ngFor="let option of options" [value]="option.value">
-          {{ option.viewValue }}
+        <mat-option *ngFor="let option of subjects" [value]="option">
+          {{ option }}
         </mat-option>
       </mat-select>
       <mat-select formControlName="levelOption" placeholder="Level" class="mat-select">
-        <mat-option *ngFor="let option of options" [value]="option.value">
-          {{ option.viewValue }}
+        <mat-option *ngFor="let option of levels" [value]="option">
+          {{ option }}
         </mat-option>
       </mat-select>
     </div>

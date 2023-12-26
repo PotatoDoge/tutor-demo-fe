@@ -4,6 +4,7 @@ import { StudentService } from '../../../services/student.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ThemePalette } from '@angular/material/core';
+import {SubjectLevelService} from "../../../services/subjectLevel.service";
 
 @Component({
   selector: 'app-appointment',
@@ -21,28 +22,23 @@ export class AppointmentComponent{
     { value: 'option2', viewValue: 'Option 2' },
     // Add more options as needed
   ];
+  subjects:String[] = []
+  levels:String[] = []
 
   constructor(
     private _fb: FormBuilder,
     private studentService: StudentService,
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private subjectLevelService: SubjectLevelService
   ) {
     this.empForm = this._fb.group({
-      firstName: '',
-      lastName: '',
-      email: '',
-      selectedOption: [''] // Initialize with an empty value
+      subjectOption: '',
+      levelOption: '',
+      studentId: '',
+      selectedOption: ['']
     });
-  }
-
-  ngOnInit() {
-    this.empForm = this._fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', Validators.email],
-      selectedOption: [''] // Add your selection control with initial value
-    });
+  this.getSubjectAndLevelSets();
   }
 
   onFormSubmit() {
@@ -66,4 +62,18 @@ export class AppointmentComponent{
       panelClass: [snackbar_style],
     });
   }
+
+  // Assuming your method is inside a class
+  private getSubjectAndLevelSets() {
+    this.subjectLevelService.getSubjectLevels().subscribe(
+      (response) => {
+        this.subjects = Array.from(new Set(response.data.subjectLevels.map(item => item.subject)));
+        this.levels = Array.from(new Set(response.data.subjectLevels.map(item => item.level)));
+      },
+      (error) => {
+        console.error('Error occurred:', error);
+      }
+    );
+  }
+
 }
