@@ -1,7 +1,6 @@
 <h1>Students</h1>
 <div class="info-cards">
   <div class="card" *ngFor="let student of dataSource.data">
-    <div class="card-head"><img [src]="getImage(student.id)" class="fixed-size-image"></div>
     <div class="card-body">
       <ul>
         <span class="card-property-description">
@@ -22,4 +21,3 @@
   <button mat-raised-button (click)="openStudentInfoModal()">Add Student</button>
   <button mat-raised-button (click)="openAppointmentModal()">Create Appointment</button>
 </div>
-
